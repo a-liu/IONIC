@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Input some characters to encrypt it.</h2>
+  <form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
+    <label class="item item-input">
+      <input type="text" [(ngModel)]="beforeText" name="encodeText" #supportQuestion="ngModel" required>
+    </label>
+    <button class="button button-small-wp button-balanced">
+      Encrypt
+    </button>
+    <label class="item item-input">
+      <input type="text" placeholder="">
+    </label>
+  </form>
+</ion-content>
