@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
 import { Platform } from 'ionic-angular';
-declare var networkinterface: any;
+declare var window: any;
 // interface Window {
 //   sqlitePlugin: any;
 //   secret: any;
@@ -25,19 +25,19 @@ export class HomePage {
     //   }
     // });
   }
-  getIpAddress() {
-    alert('getIpAddress');
-    if ('undefined' != typeof networkinterface) {
-      networkinterface.zzzssssssssssssssssssss  qsm (function (ip) {
-        alert(ip);
-      });
-    }
-  }
+  // getIpAddress() {
+  //   alert('getIpAddress');
+  //   if ('undefined' != typeof networkinterface) {
+  //     networkinterface.getIPAddress(function (ip) {
+  //       alert(ip);
+  //     });
+  //   }
+  // }
   submit(form: NgForm) {
     this.submitted = true;
     // var db = (<any>window).sqlitePlugin.openDatabase({name: "my.db"});
     if (form.valid) {
-      this.getIpAddress();
+      // this.getIpAddress();
       // alert(this.beforeText)
       this.beforeText = '';
       this.submitted = false;
@@ -65,7 +65,7 @@ export class HomePage {
       // if (!window.networkinterface) {
       //   alert('networkinterface is not avialable');
       // }
-      (<any>window).secret.coolMethod('hello');
+      window.plugins.secret.coolMethod('hello');
       // if (!window.BleSecret) {
       //   alert('ble_secret is not avialable');
       // }
