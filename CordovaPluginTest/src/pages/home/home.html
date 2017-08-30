@@ -5,16 +5,25 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Input some characters to encrypt it.</h2>
+  <h2>Input some byte characters and split with space char.<br>
+    Like this: 0A BE 00 ED 98 ...
+  </h2>
   <form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
-    <label class="item item-input">
-      <input type="text" [(ngModel)]="beforeText" name="encodeText" #supportQuestion="ngModel" required>
-    </label>
+    <p>
+      <label class="item item-input">
+        <input type="text" [(ngModel)]="beforeText" name="beforeTextModel" #beforeTextModel="ngModel">
+      </label>
+    </p>
+    <p>
     <button class="button button-small-wp button-balanced">
-      Encrypt
+      Encrypt/Decrypt
     </button>
-    <label class="item item-input">
-      <input type="text" placeholder="">
-    </label>
+    </p>
+    <p>
+      <label class="item item-input">
+        <input type="text" [(ngModel)]="afterText" name= "afterTextModel" #afterTextModel="ngModel">
+      </label>
+    </p>
+
   </form>
 </ion-content>

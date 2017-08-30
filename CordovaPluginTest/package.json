@@ -30,17 +30,17 @@
         "cordova-plugin-ble-central": "^1.1.4",
         "cordova-plugin-ble-secret": "git+https://github.com/a-liu/cordova-plugin-ble-secret.git",
         "cordova-plugin-camera": "^2.4.1",
-        "cordova-plugin-compat": "file:node_modules\\cordova-plugin-compat",
-        "cordova-plugin-console": "1.0.5",
-        "cordova-plugin-device": "1.1.4",
+        "cordova-plugin-compat": "^1.1.0",
+        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-facebook4": "^1.9.1",
         "cordova-plugin-network-information": "^1.3.3",
         "cordova-plugin-networkinterface": "^1.2.0",
         "cordova-plugin-sqlite": "^1.0.3",
-        "cordova-plugin-statusbar": "2.2.2",
-        "cordova-plugin-whitelist": "1.3.1",
+        "cordova-plugin-statusbar": "^2.2.2",
+        "cordova-plugin-whitelist": "^1.3.1",
         "ionic-angular": "3.6.0",
-        "ionic-plugin-keyboard": "~2.2.1",
+        "ionic-plugin-keyboard": "^2.2.1",
         "ionicons": "3.0.0",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
@@ -48,14 +48,13 @@
     },
     "devDependencies": {
         "@ionic/app-scripts": "2.1.3",
+        "ionic": "3.9.2",
         "typescript": "2.3.4"
     },
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-camera": {},
             "cordova-plugin-compat": {},
-            "cordova-plugin-ble-central": {},
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-statusbar": {},
@@ -65,10 +64,13 @@
             "cordova-plugin-networkinterface": {},
             "cordova-plugin-sqlite": {},
             "cordova-plugin-background-mode": {},
+            "cordova-plugin-ble-central": {},
+            "cordova-plugin-camera": {},
             "cordova-plugin-ble-secret": {}
         },
         "platforms": [
-            "android"
+            "android",
+            "browser"
         ]
     }
 }
